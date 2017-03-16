@@ -5,11 +5,7 @@ add_definitions( -DGLEW_STATIC -D_CRT_SECURE_NO_WARNINGS )
 set(Testbed_Framework_SRCS
 	Framework/DebugDraw.cpp
 	Framework/DebugDraw.h
-	Framework/imgui.h
-	Framework/imgui.cpp
 	Framework/Main.cpp
-	Framework/RenderGL3.cpp
-	Framework/RenderGL3.h
 	Framework/Test.cpp
 	Framework/Test.h
 )
