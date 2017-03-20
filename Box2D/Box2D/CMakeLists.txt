@@ -124,7 +124,7 @@ set(BOX2D_General_HDRS
 include_directories( ../ )
 
 if(BOX2D_BUILD_SHARED)
-	add_library(Box2D_shared SHARED
+	add_library(Box2D SHARED
 		${BOX2D_General_HDRS}
 		${BOX2D_Joints_SRCS}
 		${BOX2D_Joints_HDRS}
@@ -141,7 +141,7 @@ if(BOX2D_BUILD_SHARED)
 		${BOX2D_Rope_SRCS}
 		${BOX2D_Rope_HDRS}
 	)
-	set_target_properties(Box2D_shared PROPERTIES
+	set_target_properties(Box2D PROPERTIES
 		OUTPUT_NAME "Box2D"
 		CLEAN_DIRECT_OUTPUT 1
 		VERSION ${BOX2D_VERSION}
@@ -195,7 +195,7 @@ if(BOX2D_INSTALL)
 
 	# install libraries
 	if(BOX2D_BUILD_SHARED)
-		install(TARGETS Box2D_shared EXPORT Box2D-targets 
+		install(TARGETS Box2D EXPORT Box2D-targets
                   LIBRARY DESTINATION ${LIB_INSTALL_DIR}
                   ARCHIVE DESTINATION ${LIB_INSTALL_DIR}
                   RUNTIME DESTINATION bin)
